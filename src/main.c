@@ -17,13 +17,17 @@
 /*  ---------------------------------------------------------------------   */
 /*                                                            MULTIBEANS.   */
 /****************************************************************************/
+
+
+// all_channel_datas.ch_data.channal_0
+
+
 #include "global.h"
 #include "main.h"
 
-short               emif_rbuffer[8];
-bool                leds_flash_flag = 0;
-struct ad9833_t     ad9833_dev;
-AllChannelData      all_channel_datas;
+bool                    leds_flash_flag = 0;
+struct ad9833_t        ad9833_dev;
+AllChannelData         all_channel_datas;
 
 
 int main( void )
@@ -37,6 +41,7 @@ int main( void )
     PSCInit();
     led_gpio_init();
     init_ad9833( &ad9833_dev );
+    ad9833_dev.set_wave_para( &ad9833_dev, 100000, 0, SIN );
     InterruptInit();
     ads8568_device_init( 100 );
 
@@ -95,7 +100,7 @@ void init_ad9833( struct ad9833_t *dev )
     dev->hw.sdi           =   SDI_GPIO_PORT_NUMBER;
 
     dev->init_device( dev );
-    dev->set_wave_para( dev, 100000, 0, SIN );
+
 
 }
 

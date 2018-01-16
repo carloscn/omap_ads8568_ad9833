@@ -1,7 +1,7 @@
 ******************************************************************************
                TMS320C6x Linker Unix v8.2.2                    
 ******************************************************************************
->> Linked Tue Jan 16 16:03:07 2018
+>> Linked Tue Jan 16 16:51:22 2018
 
 OUTPUT FILE NAME:   <OMAPL138_AD8568_SINGLE_CORE_DSP_CCSV74.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 1181b1e0
@@ -321,8 +321,8 @@ address   name
 11817a50  IntRegister                      
 11817dc4  IntReset                         
 11817a74  IntUnRegister                    
-11819470  InterruptInit                    
-11819484  PSCInit                          
+11819494  InterruptInit                    
+118194a8  PSCInit                          
 1181a6c0  PSCModuleControl                 
 11813b20  TMR_PERIOD_LSB32                 
 11813b24  TMR_PERIOD_MSB32                 
@@ -350,7 +350,7 @@ address   name
 118178dc  TimerInvertINEnable              
 1181798c  TimerInvertOUTDisable            
 11817950  TimerInvertOUTEnable             
-11819108  TimerIsr                         
+1181912c  TimerIsr                         
 118178ac  TimerOUTStatusGet                
 11817390  TimerPeriodGet                   
 11817354  TimerPeriodSet                   
@@ -473,7 +473,7 @@ ffffffff  __c_args__
 ffffffff  binit                            
 1181aa20  copy_in                          
 1181ace0  exit                             
-118194b0  init_ad9833                      
+118194d4  init_ad9833                      
 1181a800  led_gpio_init                    
 1181a884  leds_flash                       
 11813b28  leds_flash_flag                  
@@ -654,10 +654,10 @@ address   name
 11819024  UARTModemControlGet              
 11819044  UARTModemStatusGet               
 11819080  main                             
-11819108  TimerIsr                         
-11819470  InterruptInit                    
-11819484  PSCInit                          
-118194b0  init_ad9833                      
+1181912c  TimerIsr                         
+11819494  InterruptInit                    
+118194a8  PSCInit                          
+118194d4  init_ad9833                      
 118196e8  CacheEnable                      
 118197c8  CacheEnableMAR                   
 11819860  CacheDisableMAR                  
